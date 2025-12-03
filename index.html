@@ -3,112 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sava: Penguasa Digital - Royal Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:ital@0;1&display=swap" rel="stylesheet">
+    <title>Portofolio [Nama Kamu] | Eksperimental Mangunan</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="royal-header">
-        <nav>
-            <a href="#home">HOME</a>
-            <a href="#about">SILSILAH</a>
-            <a href="#hobby">QUEST/MISI</a>
-            <a href="#skill">ARMOR RATING</a>
-            <a href="#contact">GULUNGAN</a>
-        </nav>
+    <header>
+        <div class="container">
+            <h1>[Nama Kamu]</h1>
+            <nav>
+                <ul>
+                    <li><a href="#tentang">Tentang</a></li>
+                    <li><a href="#hobi">Hobi & Proyek</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <section id="home" class="hero-banner">
-        <div class="banner-content">
-            <div class="crest-image">Lambang</div>
-            <h1>SAVA: PENGUASA DIGITAL</h1>
-            <p>Pedang saya adalah kode, perisai saya adalah desain.</p>
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <p class="greeting">👋 Halo! Saya...</p>
+            <h2>Siswa Kelas IX SMP Eksperimental Mangunan</h2>
+            <p class="bio-short">14 tahun | Siap Mengkode, Memasak, dan Berpetualang!</p>
+            <a href="#hobi" class="btn">Lihat Proyek Saya</a>
+        </div>
+        
+    </section>
+
+    <section id="tentang" class="section-padding">
+        <div class="container">
+            <h3>✨ Tentang Saya</h3>
+            <p>Saya [Nama Kamu], siswa **Kelas IX** di **SMP Eksperimental Mangunan**. Berusia 14 tahun, saya percaya bahwa belajar adalah sebuah petualangan. Saya tidak hanya senang memecahkan masalah dengan kode, tetapi juga menciptakan keindahan melalui masakan, benang rajutan, dan pengalaman baru saat *traveling*.</p>
+            <p>Filosofi saya: **Inovasi dan Kreasi** harus berjalan beriringan.</p>
         </div>
     </section>
 
-    <section id="about" class="royal-scroll">
-        <div class="scroll-paper">
-            <h2>📜 Silsilah Keluarga (About Me)</h2>
-            <p>Saya, Sava, keturunan dari garis keturunan yang menghargai ketelitian dan seni. Warisan saya adalah membangun struktur digital yang kuat. Saya percaya bahwa setiap proyek adalah sebuah kastil yang memerlukan fondasi kode yang kokoh.</p>
-            <p>Sejak muda, saya telah dilatih dalam disiplin ilmu digital, mempersiapkan diri untuk menjadi Ksatria Kode yang melindungi dan membangun dunia maya.</p>
-        </div>
-    </section>
+    <hr>
 
-    <section id="hobby" class="royal-quests">
-        <h2>⚔️ Quest Harian & Misi (Hobby)</h2>
-        <div class="quest-list">
-            <div class="quest-item">
-                <i class="fas fa-keyboard"></i>
-                <h3>Misi Pembuatan Mantra (Coding)</h3>
-            </div>
-            <div class="quest-item">
-                <i class="fas fa-film"></i>
-                <h3>Kisah Epik di Aula Kerajaan (Nonton Film)</h3>
-            </div>
-             <div class="quest-item">
-                <i class="fas fa-cut"></i>
-                <h3>Menenun Jubah Ksatria (Merajut)</h3>
-            </div>
-            <div class="quest-item">
-                <i class="fas fa-utensils"></i>
-                <h3>Pesta Kerajaan (Memasak)</h3>
-            </div>
-            <div class="quest-item">
-                <i class="fas fa-map-marked-alt"></i>
-                <h3>Perjalanan Antar-Kerajaan (Jalan-jalan)</h3>
-            </div>
-        </div>
-    </section>
+    <section id="hobi" class="section-padding">
+        <div class="container">
+            <h3>🎨 Hobi & Proyek Pilihan</h3>
 
-    <section id="skill" class="royal-armor">
-        <h2>🛡️ Armor Rating (Keahlian)</h2>
-        <div class="skill-ratings">
-            <div class="rating-item">
-                <h3>HTML/CSS</h3>
-                <div class="armor-bar offensive-bar" style="--level: 95%;">
-                    <i class="fas fa-sword"></i> Pedang Level 9.5/10
+            <div class="hobi-grid">
+                <div class="hobi-item coding">
+                    <h4>🖥️ Coding & Web Development</h4>
+                    <p>Fokus pada **HTML, CSS, dan JavaScript**. Saya suka membuat website sederhana dan mengeksplorasi logika pemrograman. (Contoh Proyek: Kalkulator Sederhana, Desain Landing Page)</p>
                 </div>
-            </div>
-            <div class="rating-item">
-                <h3>JavaScript</h3>
-                <div class="armor-bar offensive-bar" style="--level: 80%;">
-                    <i class="fas fa-sword"></i> Pedang Level 8/10
+
+                <div class="hobi-item cooking">
+                    <h4>🍳 Memasak & Baking</h4>
+                    <p>Saya suka bereksperimen di dapur, mencoba resep baru, dari kue-kue manis hingga masakan tradisional. Memasak adalah seni dan kimia yang menyenangkan! (Contoh Resep: Roti Sobek, Brownies Cokelat)</p>
                 </div>
-            </div>
-            <div class="rating-item">
-                <h3>Problem Solving</h3>
-                <div class="armor-bar defensive-bar" style="--level: 90%;">
-                    <i class="fas fa-shield-alt"></i> Perisai Anti-Naga Level 9/10
+
+                <div class="hobi-item traveling">
+                    <h4>🗺️ Traveling & Eksplorasi</h4>
+                    <p>Saya percaya perjalanan membuka wawasan. Saya senang mengunjungi tempat-tempat baru dan mencatat pengalaman saya. (Contoh Perjalanan: Kunjungan ke Museum Sains, Mendaki Bukit Kecil)</p>
                 </div>
-            </div>
-            <div class="rating-item">
-                <h3>UI/UX Design</h3>
-                <div class="armor-bar defensive-bar" style="--level: 75%;">
-                    <i class="fas fa-shield-alt"></i> Perisai Estetika Level 7.5/10
+
+                <div class="hobi-item knitting">
+                    <h4>🧶 Merajut & Kerajinan Tangan</h4>
+                    <p>Merajut adalah cara saya bersantai dan menciptakan sesuatu yang unik dengan tangan. Proyek favorit: dompet kecil dan *scrunchies*. (Contoh Karya: Syal Mini, Hiasan Gantung)</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="royal-contact">
-        <div class="parchment-form">
-            <h2>✉️ Pesan untuk Sang Ksatria</h2>
-            <p class="contact-number">Hubungi Pengawal: <span>0815 4841 2025</span></p>
-            <form action="#" method="POST">
-                <input type="text" placeholder="Nama Utusan" required>
-                <input type="email" placeholder="Alamat Burung Hantu (Email)" required>
-                <textarea placeholder="Isi Gulungan Pesan" rows="5" required></textarea>
-                <button type="submit" class="stamp-button">Kirim Utusan</button>
-            </form>
-            <br>
-            <p style="color: #666; font-size: 0.9em;">*Catatan: Formulir ini hanya simulasi dan belum terhubung ke email.</p>
+    <hr>
+
+    <section id="kontak" class="section-padding">
+        <div class="container">
+            <h3>📬 Mari Berkenalan</h3>
+            <p>Tertarik untuk berdiskusi tentang kode, resep, atau ide kerajinan? Hubungi saya!</p>
+            <ul class="social-links">
+                <li>Email: <a href="mailto:emailanda@email.com">[emailanda@email.com]</a></li>
+                <li>Instagram: <a href="https://instagram.com/usernamekamu" target="_blank">@usernamekamu</a></li>
+                <li>GitHub: <a href="https://github.com/usernamekamu" target="_blank">/usernamekamu</a></li>
+            </ul>
+            <p class="closing-note">Terima kasih sudah mampir! 😊</p>
         </div>
     </section>
 
-    <footer class="royal-footer">
-        <p>&copy; 2025 Kerajaan Sava - Dibuat dengan Kode dan Kehormatan</p>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Portofolio [Nama Kamu]. Dibuat dengan ✨ dan ❤️.</p>
+        </div>
     </footer>
 
 </body>
