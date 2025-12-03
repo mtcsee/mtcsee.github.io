@@ -1,115 +1,261 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sava: Penguasa Digital - Royal Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:ital@0;1&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
+/* RESET DASAR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <header class="royal-header">
-        <nav>
-            <a href="#home">HOME</a>
-            <a href="#about">SILSILAH</a>
-            <a href="#hobby">QUEST/MISI</a>
-            <a href="#skill">ARMOR RATING</a>
-            <a href="#contact">GULUNGAN</a>
-        </nav>
-    </header>
+:root {
+    /* Palet Warna Aesthetic/Cozy */
+    --primary-color: #5D9C96; /* Hijau Mint yang Menenangkan */
+    --secondary-color: #FFC0CB; /* Pink Lembut */
+    --text-color: #333333; /* Abu Gelap */
+    --light-bg: #F9F9F9; /* Background Sangat Terang */
+    --white: #FFFFFF;
+    --accent-color: #FFD700; /* Emas Muda untuk Aksen */
+}
 
-    <section id="home" class="hero-banner">
-        <div class="banner-content">
-            <div class="crest-image">Lambang</div>
-            <h1>SAVA: PENGUASA DIGITAL</h1>
-            <p>Pedang saya adalah kode, perisai saya adalah desain.</p>
-        </div>
-    </section>
+/* FONT STYLE */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--light-bg);
+}
 
-    <section id="about" class="royal-scroll">
-        <div class="scroll-paper">
-            <h2>📜 Silsilah Keluarga (About Me)</h2>
-            <p>Saya, Sava, keturunan dari garis keturunan yang menghargai ketelitian dan seni. Warisan saya adalah membangun struktur digital yang kuat. Saya percaya bahwa setiap proyek adalah sebuah kastil yang memerlukan fondasi kode yang kokoh.</p>
-            <p>Sejak muda, saya telah dilatih dalam disiplin ilmu digital, mempersiapkan diri untuk menjadi Ksatria Kode yang melindungi dan membangun dunia maya.</p>
-        </div>
-    </section>
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary-color);
+    margin-bottom: 0.5em;
+}
 
-    <section id="hobby" class="royal-quests">
-        <h2>⚔️ Quest Harian & Misi (Hobby)</h2>
-        <div class="quest-list">
-            <div class="quest-item">
-                <i class="fas fa-keyboard"></i>
-                <h3>Misi Pembuatan Mantra (Coding)</h3>
-            </div>
-            <div class="quest-item">
-                <i class="fas fa-film"></i>
-                <h3>Kisah Epik di Aula Kerajaan (Nonton Film)</h3>
-            </div>
-             <div class="quest-item">
-                <i class="fas fa-cut"></i>
-                <h3>Menenun Jubah Ksatria (Merajut)</h3>
-            </div>
-            <div class="quest-item">
-                <i class="fas fa-utensils"></i>
-                <h3>Pesta Kerajaan (Memasak)</h3>
-            </div>
-            <div class="quest-item">
-                <i class="fas fa-map-marked-alt"></i>
-                <h3>Perjalanan Antar-Kerajaan (Jalan-jalan)</h3>
-            </div>
-        </div>
-    </section>
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-    <section id="skill" class="royal-armor">
-        <h2>🛡️ Armor Rating (Keahlian)</h2>
-        <div class="skill-ratings">
-            <div class="rating-item">
-                <h3>HTML/CSS</h3>
-                <div class="armor-bar offensive-bar" style="--level: 95%;">
-                    <i class="fas fa-sword"></i> Pedang Level 9.5/10
-                </div>
-            </div>
-            <div class="rating-item">
-                <h3>JavaScript</h3>
-                <div class="armor-bar offensive-bar" style="--level: 80%;">
-                    <i class="fas fa-sword"></i> Pedang Level 8/10
-                </div>
-            </div>
-            <div class="rating-item">
-                <h3>Problem Solving</h3>
-                <div class="armor-bar defensive-bar" style="--level: 90%;">
-                    <i class="fas fa-shield-alt"></i> Perisai Anti-Naga Level 9/10
-                </div>
-            </div>
-            <div class="rating-item">
-                <h3>UI/UX Design</h3>
-                <div class="armor-bar defensive-bar" style="--level: 75%;">
-                    <i class="fas fa-shield-alt"></i> Perisai Estetika Level 7.5/10
-                </div>
-            </div>
-        </div>
-    </section>
+.section-padding {
+    padding: 60px 0;
+}
 
-    <section id="contact" class="royal-contact">
-        <div class="parchment-form">
-            <h2>✉️ Pesan untuk Sang Ksatria</h2>
-            <p class="contact-number">Hubungi Pengawal: <span>0815 4841 2025</span></p>
-            <form action="#" method="POST">
-                <input type="text" placeholder="Nama Utusan" required>
-                <input type="email" placeholder="Alamat Burung Hantu (Email)" required>
-                <textarea placeholder="Isi Gulungan Pesan" rows="5" required></textarea>
-                <button type="submit" class="stamp-button">Kirim Utusan</button>
-            </form>
-            <br>
-            <p style="color: #666; font-size: 0.9em;">*Catatan: Formulir ini hanya simulasi dan belum terhubung ke email.</p>
-        </div>
-    </section>
+hr {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    width: 50%;
+}
 
-    <footer class="royal-footer">
-        <p>&copy; 2025 Kerajaan Sava - Dibuat dengan Kode dan Kehormatan</p>
-    </footer>
+/* HEADER & NAVIGASI */
+header {
+    background-color: var(--white);
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
 
-</body>
-</html>
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
+    color: var(--text-color); /* Nama tetap terlihat jelas */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 10px 15px;
+    transition: color 0.3s, border-bottom 0.3s;
+    font-weight: 600;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+
+/* HERO/JUMBOTRON */
+.hero {
+    background-color: var(--secondary-color); /* Warna yang lembut */
+    padding: 80px 0;
+    text-align: center;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    z-index: 10;
+    max-width: 800px;
+}
+
+.hero h2 {
+    font-size: 3em;
+    color: var(--white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.hero .greeting {
+    font-size: 1.2em;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.hero .bio-short {
+    font-size: 1.1em;
+    color: var(--text-color);
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 700;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    background-color: #4A8C86; /* Warna lebih gelap saat hover */
+    transform: translateY(-2px);
+}
+
+/* BAGIAN TENTANG SAYA */
+#tentang {
+    background-color: var(--white);
+    text-align: center;
+}
+#tentang p {
+    max-width: 800px;
+    margin: 15px auto;
+}
+
+/* HOBI GRID */
+.hobi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.hobi-item {
+    background-color: var(--white);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-left: 5px solid var(--primary-color); /* Garis warna sebagai penanda */
+}
+
+.hobi-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.hobi-item h4 {
+    color: var(--text-color);
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+/* HOBI Aksen Warna Berdasarkan Jenis */
+.coding { border-left-color: #007ACC; } /* Biru untuk coding */
+.cooking { border-left-color: #FF5733; } /* Merah/Oranye untuk masak */
+.traveling { border-left-color: #33A1FF; } /* Biru Langit untuk traveling */
+.knitting { border-left-color: #E6B0AA; } /* Merah Muda untuk merajut */
+
+
+/* KONTAK */
+#kontak {
+    background-color: var(--light-bg);
+    text-align: center;
+}
+
+.social-links {
+    list-style: none;
+    padding: 20px 0;
+}
+
+.social-links li {
+    margin: 10px 0;
+}
+
+.social-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+}
+
+.closing-note {
+    margin-top: 20px;
+    font-style: italic;
+    color: var(--text-color);
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+    nav ul {
+        margin-top: 15px;
+        justify-content: center;
+    }
+    .hero h2 {
+        font-size: 2.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li a {
+        padding: 5px 10px;
+        font-size: 0.9em;
+    }
+    .hero {
+        padding: 60px 0;
+    }
+    .hero h2 {
+        font-size: 1.8em;
+    }
+}
