@@ -1,17 +1,4 @@
-
-me" class="hero-banner">
-        <div class="banner-content">
-            <div class="crest"></div>
-            <h1>SAVA: PENGUASA DIGITAL</h1>
-            <p>Pedang saya adalah kode, perisai saya adalah desain.</p>
-        </div>
-    </section>
-
-    <section id="about" class="royal-scroll">
-        <div class="scroll-paper">
-            <h2>📜 Silsilah Keluarga (About Me)</h2>
-            <p>Saya, Sava, keturunan dari garis keturunan yang menghargai ketelitian dan seni. Warisan saya adalah membangun struktur yang kuat...</p>
-            <p>...lanjutkan narasi About Me<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -33,7 +20,19 @@ me" class="hero-banner">
         </nav>
     </header>
 
-    <section id="ho...</p>
+    <section id="home" class="hero-banner">
+        <div class="banner-content">
+            <div class="crest-image">Lambang</div>
+            <h1>SAVA: PENGUASA DIGITAL</h1>
+            <p>Pedang saya adalah kode, perisai saya adalah desain.</p>
+        </div>
+    </section>
+
+    <section id="about" class="royal-scroll">
+        <div class="scroll-paper">
+            <h2>📜 Silsilah Keluarga (About Me)</h2>
+            <p>Saya, Sava, keturunan dari garis keturunan yang menghargai ketelitian dan seni. Warisan saya adalah membangun struktur digital yang kuat. Saya percaya bahwa setiap proyek adalah sebuah kastil yang memerlukan fondasi kode yang kokoh.</p>
+            <p>Sejak muda, saya telah dilatih dalam disiplin ilmu digital, mempersiapkan diri untuk menjadi Ksatria Kode yang melindungi dan membangun dunia maya.</p>
         </div>
     </section>
 
@@ -68,29 +67,43 @@ me" class="hero-banner">
         <div class="skill-ratings">
             <div class="rating-item">
                 <h3>HTML/CSS</h3>
-                <div class="armor-bar offensive-bar" style="--level: 90%;">
-                    <i class="fas fa-sword"></i> Pedang Level 9/10
+                <div class="armor-bar offensive-bar" style="--level: 95%;">
+                    <i class="fas fa-sword"></i> Pedang Level 9.5/10
+                </div>
+            </div>
+            <div class="rating-item">
+                <h3>JavaScript</h3>
+                <div class="armor-bar offensive-bar" style="--level: 80%;">
+                    <i class="fas fa-sword"></i> Pedang Level 8/10
                 </div>
             </div>
             <div class="rating-item">
                 <h3>Problem Solving</h3>
-                <div class="armor-bar defensive-bar" style="--level: 80%;">
-                    <i class="fas fa-shield-alt"></i> Perisai Anti-Naga Level 8/10
+                <div class="armor-bar defensive-bar" style="--level: 90%;">
+                    <i class="fas fa-shield-alt"></i> Perisai Anti-Naga Level 9/10
                 </div>
             </div>
+            <div class="rating-item">
+                <h3>UI/UX Design</h3>
+                <div class="armor-bar defensive-bar" style="--level: 75%;">
+                    <i class="fas fa-shield-alt"></i> Perisai Estetika Level 7.5/10
+                </div>
             </div>
+        </div>
     </section>
 
     <section id="contact" class="royal-contact">
         <div class="parchment-form">
             <h2>✉️ Pesan untuk Sang Ksatria</h2>
             <p class="contact-number">Hubungi Pengawal: <span>0815 4841 2025</span></p>
-            <form>
-                <input type="text" placeholder="Nama Utusan">
-                <input type="email" placeholder="Alamat Burung Hantu">
-                <textarea placeholder="Isi Gulungan Pesan"></textarea>
+            <form action="#" method="POST">
+                <input type="text" placeholder="Nama Utusan" required>
+                <input type="email" placeholder="Alamat Burung Hantu (Email)" required>
+                <textarea placeholder="Isi Gulungan Pesan" rows="5" required></textarea>
                 <button type="submit" class="stamp-button">Kirim Utusan</button>
             </form>
+            <br>
+            <p style="color: #666; font-size: 0.9em;">*Catatan: Formulir ini hanya simulasi dan belum terhubung ke email.</p>
         </div>
     </section>
 
@@ -100,236 +113,3 @@ me" class="hero-banner">
 
 </body>
 </html>
-
-/* Palet Warna */
-:root {
-    --color-gold: #FFD700;
-    --color-dark-red: #8B0000;
-    --color-stone: #36454F;
-    --color-parchment: #F5F5DC;
-    --color-text: #F5F5DC;
-}
-
-/* Font Setting */
-body {
-    font-family: 'Lora', serif;
-    background-color: var(--color-stone);
-    color: var(--color-text);
-    margin: 0;
-    line-height: 1.6;
-}
-
-h1, h2, h3 {
-    font-family: 'Cinzel', serif;
-    color: var(--color-gold);
-    text-transform: uppercase;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-}
-
-/* Header/Navigasi */
-.royal-header {
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 15px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 2px solid var(--color-gold);
-}
-
-.royal-header nav {
-    text-align: center;
-}
-
-.royal-header a {
-    color: var(--color-text);
-    margin: 0 20px;
-    text-decoration: none;
-    font-weight: 700;
-    transition: color 0.3s;
-    text-transform: uppercase;
-}
-
-.royal-header a:hover {
-    color: var(--color-gold);
-}
-
-/* 1. HOME: Spanduk Kerajaan */
-.hero-banner {
-    background: url('stone-texture.jpg') repeat, linear-gradient(to bottom, #4b5320, var(--color-stone)); /* Ganti 'stone-texture.jpg' dengan tekstur batu asli */
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border-bottom: 10px solid var(--color-dark-red);
-}
-
-.banner-content {
-    background-color: rgba(139, 0, 0, 0.7); /* Merah Tua Transparan untuk spanduk */
-    padding: 40px 80px;
-    border: 5px solid var(--color-gold);
-    box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
-    max-width: 80%;
-}
-
-.crest {
-    width: 100px;
-    height: 120px;
-    margin: 0 auto 20px;
-    /* Placeholder untuk Lambang */
-    background-color: var(--color-gold); 
-    border-radius: 50%;
-}
-
-/* 2. & 5. Perkamen Style */
-.royal-scroll, .royal-contact {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.scroll-paper, .parchment-form {
-    background-color: var(--color-parchment);
-    color: #333;
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 40px;
-    border-radius: 5px;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
-    /* Efek visual gulungan bisa ditambahkan dengan pseudo-elements */
-    border: 5px dashed #a0522d; /* Garis tepi seperti perkamen */
-}
-
-.scroll-paper h2, .parchment-form h2 {
-    color: var(--color-dark-red);
-}
-
-/* 3. HOBBY: Quest/Misi */
-.royal-quests {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #2e363b; /* Sedikit lebih gelap */
-}
-
-.quest-list {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
-
-.quest-item {
-    background-color: var(--color-stone);
-    border: 3px solid var(--color-gold);
-    padding: 20px;
-    width: 150px;
-    text-align: center;
-    transition: transform 0.3s, background-color 0.3s;
-}
-
-.quest-item:hover {
-    transform: translateY(-5px);
-    background-color: var(--color-dark-red);
-}
-
-.quest-item i {
-    font-size: 3em;
-    color: var(--color-gold);
-    margin-bottom: 10px;
-}
-
-/* 4. SKILL: Armor Rating */
-.royal-armor {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.skill-ratings {
-    max-width: 600px;
-    margin: 30px auto;
-}
-
-.rating-item {
-    margin-bottom: 20px;
-}
-
-.armor-bar {
-    background-color: #444;
-    border: 2px solid var(--color-gold);
-    padding: 10px;
-    text-align: left;
-    overflow: hidden;
-    position: relative;
-    font-weight: bold;
-}
-
-.armor-bar::before {
-    content: '';
-    display: block;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: var(--level, 0%);
-    transition: width 1s ease-out;
-}
-
-.offensive-bar::before {
-    background-color: var(--color-dark-red); /* Merah Darah untuk Pedang */
-}
-
-.defensive-bar::before {
-    background-color: #008000; /* Hijau Kuat untuk Perisai */
-}
-
-.armor-bar i {
-    z-index: 10;
-    position: relative;
-    margin-right: 10px;
-}
-
-/* 5. Contact Form Style */
-.parchment-form input, .parchment-form textarea {
-    width: 90%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    background-color: var(--color-parchment);
-    color: #333;
-    font-family: 'Lora', serif; /* Font yang mudah dibaca */
-    border: none;
-    border-bottom: 2px dashed #a0522d;
-}
-
-.contact-number span {
-    font-size: 1.2em;
-    font-family: 'Cinzel', serif;
-    color: var(--color-dark-red);
-    font-weight: bold;
-}
-
-.stamp-button {
-    background-color: var(--color-dark-red);
-    color: var(--color-gold);
-    border: 2px solid var(--color-gold);
-    padding: 15px 30px;
-    cursor: pointer;
-    font-family: 'Cinzel', serif;
-    font-size: 1.1em;
-    margin-top: 20px;
-    transition: background-color 0.3s;
-    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
-}
-
-.stamp-button:hover {
-    background-color: #B22222;
-}
-
-/* Footer */
-.royal-footer {
-    background-color: black;
-    color: var(--color-text);
-    text-align: center;
-    padding: 15px;
-    border-top: 2px solid var(--color-gold);
-    font-size: 0.8em;
