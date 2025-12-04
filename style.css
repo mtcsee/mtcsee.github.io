@@ -111,15 +111,13 @@ a:hover {
     display: block;
 }
 
-/* Latar belakang bunga pada desain gambar */
+/* Latar belakang bunga pada desain gambar (dibiarkan kosong) */
 .flower-background {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    /* Gunakan background-image bunga jika Anda ingin bingkai tetap lingkaran/oval */
-    /* Untuk menyesuaikan desain, saya biarkan kosong dan mengandalkan foto profil yang dikirim */
     border-radius: 50%;
     z-index: -1;
 }
@@ -157,7 +155,7 @@ a:hover {
 }
 
 /*
- * Bagian Hobi
+ * Bagian Hobi (Grid Awal)
  */
 .hobbies-section {
     padding: 60px 0;
@@ -224,6 +222,54 @@ a:hover {
 }
 
 /*
+ * Bagian Detail Hobi
+ */
+
+.hobby-details-section {
+    /* Sembunyikan semua detail hobi secara default (akan diubah oleh JS) */
+    display: none;
+    padding: 60px 20px;
+    background-color: var(--color-background-light);
+    border-radius: 8px;
+    margin-top: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    /* Pastikan elemen ini berada di tengah konten utama */
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.detail-container {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.detail-text {
+    flex: 1;
+}
+
+.detail-image {
+    flex-shrink: 0;
+    width: 300px; /* Lebar gambar */
+    height: 300px; /* Tinggi gambar */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.detail-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hobby-details-section h2 {
+    font-size: 2.5em;
+    margin-top: 0;
+}
+
+/*
  * Footer dan Kontak
  */
 .main-footer {
@@ -231,6 +277,7 @@ a:hover {
     color: #fff;
     padding: 40px 20px;
     text-align: center;
+    margin-top: 50px; /* Tambahkan jarak dari konten */
 }
 
 .main-footer h2 {
@@ -294,6 +341,25 @@ a:hover {
 
     .details-box {
         text-align: left;
+    }
+    
+    /* Responsif untuk Detail Hobi */
+    .detail-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .detail-image {
+        width: 100%;
+        max-width: 350px;
+        height: 250px;
+        order: -1; /* Pindahkan gambar ke atas di tampilan mobile */
+        margin-bottom: 20px;
+    }
+    
+    .detail-text h2 {
+        text-align: center;
     }
 }
 
