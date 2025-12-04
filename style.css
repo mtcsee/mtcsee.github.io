@@ -62,7 +62,7 @@ a:hover {
 }
 
 .main-nav a {
-    font-weight: 400; /* Dibuat lebih ringan */
+    font-weight: 400; 
     padding: 5px 0;
     font-size: 0.9em;
     text-transform: uppercase;
@@ -98,9 +98,8 @@ a:hover {
     position: relative;
     width: 250px;
     height: 250px;
-    /* Bingkai yang menyerupai bentuk pada desain */
     border-radius: 50%; 
-    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.3); /* Bingkai luar putih transparan */
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.3); 
     overflow: hidden;
 }
 
@@ -111,7 +110,6 @@ a:hover {
     display: block;
 }
 
-/* Latar belakang bunga pada desain gambar (dibiarkan kosong) */
 .flower-background {
     position: absolute;
     top: 0;
@@ -127,7 +125,7 @@ a:hover {
 }
 
 .profile-info h1 {
-    font-size: 3.5em; /* Ukuran yang lebih besar */
+    font-size: 3.5em; 
     margin-bottom: 5px;
     line-height: 1.1;
 }
@@ -155,12 +153,46 @@ a:hover {
 }
 
 /*
- * Bagian Hobi (Grid Awal)
+ * Bagian Pengenalan Diri dan Pembuka Hobi
+ */
+.introduction-section {
+    max-width: 800px; 
+    margin: 50px auto; 
+    padding: 30px;
+    background-color: var(--color-background-light);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.intro-heading {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: var(--color-primary-dark);
+}
+
+.intro-content p {
+    font-size: 1.05em;
+    color: var(--color-text-dark);
+    margin-bottom: 15px;
+}
+
+.call-to-action {
+    font-style: italic;
+    font-weight: 500;
+    color: var(--color-secondary-accent);
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px dashed var(--color-text-tagline);
+}
+
+/*
+ * Bagian Hobi (Grid 3 Kolom Rata)
  */
 .hobbies-section {
     padding: 60px 0;
-    background-color: var(--color-background-soft); /* Warna latar yang membedakan */
-    margin: 40px -20px 0;
+    background-color: var(--color-background-soft);
+    margin: 0px -20px 0; 
     padding: 60px 20px;
 }
 
@@ -172,8 +204,7 @@ a:hover {
 
 .hobbies-grid {
     display: grid;
-    /* Grid 3 kolom, minimal 250px per item */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    grid-template-columns: repeat(3, 1fr); 
     gap: 30px;
 }
 
@@ -193,14 +224,14 @@ a:hover {
 
 .hobby-image-container {
     width: 100%;
-    height: 200px; /* Tinggi gambar hobi yang seragam */
+    height: 200px; 
     overflow: hidden;
 }
 
 .hobby-image-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Pastikan gambar mengisi container tanpa terdistorsi */
+    object-fit: cover;
     transition: transform 0.5s ease;
 }
 
@@ -222,54 +253,6 @@ a:hover {
 }
 
 /*
- * Bagian Detail Hobi
- */
-
-.hobby-details-section {
-    /* Sembunyikan semua detail hobi secara default (akan diubah oleh JS) */
-    display: none;
-    padding: 60px 20px;
-    background-color: var(--color-background-light);
-    border-radius: 8px;
-    margin-top: 40px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    /* Pastikan elemen ini berada di tengah konten utama */
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.detail-container {
-    display: flex;
-    gap: 40px;
-    align-items: flex-start;
-}
-
-.detail-text {
-    flex: 1;
-}
-
-.detail-image {
-    flex-shrink: 0;
-    width: 300px; /* Lebar gambar */
-    height: 300px; /* Tinggi gambar */
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.detail-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.hobby-details-section h2 {
-    font-size: 2.5em;
-    margin-top: 0;
-}
-
-/*
  * Footer dan Kontak
  */
 .main-footer {
@@ -277,7 +260,7 @@ a:hover {
     color: #fff;
     padding: 40px 20px;
     text-align: center;
-    margin-top: 50px; /* Tambahkan jarak dari konten */
+    margin-top: 50px; 
 }
 
 .main-footer h2 {
@@ -286,18 +269,23 @@ a:hover {
     font-size: 2em;
 }
 
-.main-footer a {
-    color: #ffe4b5; /* Warna link krem-peach */
-    font-weight: 500;
-}
-
-.main-footer a:hover {
-    color: #fff;
+.contact-info {
+    max-width: 300px; 
+    margin: 0 auto 20px; 
 }
 
 .contact-info p {
     margin: 8px 0;
     font-weight: 300;
+}
+
+.main-footer a {
+    color: #ffe4b5; 
+    font-weight: 500;
+}
+
+.main-footer a:hover {
+    color: #fff;
 }
 
 .copyright {
@@ -311,7 +299,7 @@ a:hover {
  */
 @media (max-width: 900px) {
     .hobbies-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
     }
 }
 
@@ -343,23 +331,13 @@ a:hover {
         text-align: left;
     }
     
-    /* Responsif untuk Detail Hobi */
-    .detail-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+    .introduction-section {
+        margin: 30px 10px;
+        padding: 20px;
     }
     
-    .detail-image {
-        width: 100%;
-        max-width: 350px;
-        height: 250px;
-        order: -1; /* Pindahkan gambar ke atas di tampilan mobile */
-        margin-bottom: 20px;
-    }
-    
-    .detail-text h2 {
-        text-align: center;
+    .intro-heading {
+        font-size: 1.8em;
     }
 }
 
