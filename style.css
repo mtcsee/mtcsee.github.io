@@ -1,261 +1,230 @@
-/* RESET DASAR */
-* {
+
+/*
+ * Gaya Umum dan Estetika
+ * Menggunakan font Playfair Display (serif, elegan) dan Roboto (sans-serif, modern)
+ */
+body {
+    /* Latar belakang estetis dengan gradasi warna lembut (seperti pink muda ke krem) */
+    background-image: linear-gradient(135deg, #fcefee 0%, #fef5e9 100%);
+    font-family: 'Roboto', sans-serif;
+    color: #333; /* Warna teks gelap yang lembut */
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-:root {
-    /* Palet Warna Aesthetic/Cozy */
-    --primary-color: #5D9C96; /* Hijau Mint yang Menenangkan */
-    --secondary-color: #FFC0CB; /* Pink Lembut */
-    --text-color: #333333; /* Abu Gelap */
-    --light-bg: #F9F9F9; /* Background Sangat Terang */
-    --white: #FFFFFF;
-    --accent-color: #FFD700; /* Emas Muda untuk Aksen */
-}
-
-/* FONT STYLE */
-body {
-    font-family: 'Poppins', sans-serif;
-    color: var(--text-color);
     line-height: 1.6;
-    background-color: var(--light-bg);
+    scroll-behavior: smooth;
 }
 
 h1, h2, h3 {
     font-family: 'Playfair Display', serif;
-    color: var(--primary-color);
-    margin-bottom: 0.5em;
+    color: #5d4a4a; /* Warna judul yang lebih menonjol */
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
+a {
+    color: #a0522d; /* Warna link cokelat tanah */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #8b4513; /* Warna link saat di-hover */
+}
+
+/*
+ * Header dan Navigasi
+ */
+.main-header {
+    background-color: rgba(255, 255, 255, 0.8); /* Latar belakang transparan */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 15px 20px;
     margin: 0 auto;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-.section-padding {
+.main-nav a {
+    font-weight: 700;
+    padding: 5px 10px;
+    border-bottom: 2px solid transparent;
+}
+
+.main-nav a:hover {
+    color: #5d4a4a;
+    border-bottom: 2px solid #5d4a4a;
+}
+
+/*
+ * Konten Utama (Main)
+ */
+.content-wrapper {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/*
+ * Bagian Profil Hero
+ */
+.profile-hero {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 0;
+    border-bottom: 1px solid #e0d9d3;
+}
+
+.profile-image-container {
+    flex-shrink: 0;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%; /* Membuat gambar menjadi lingkaran */
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.profile-info h1 {
+    font-size: 3em;
+    margin-bottom: 5px;
+}
+
+.tagline {
+    font-style: italic;
+    color: #a0522d;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.details-box {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-left: 3px solid #a0522d;
+    border-radius: 5px;
+}
+
+.details-box h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+/*
+ * Bagian Hobi
+ */
+.hobbies-section {
     padding: 60px 0;
 }
 
-hr {
-    border: none;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    margin: 40px auto;
-    width: 50%;
-}
-
-/* HEADER & NAVIGASI */
-header {
-    background-color: var(--white);
-    padding: 20px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 1.8em;
-    color: var(--text-color); /* Nama tetap terlihat jelas */
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: var(--text-color);
-    padding: 10px 15px;
-    transition: color 0.3s, border-bottom 0.3s;
-    font-weight: 600;
-}
-
-nav ul li a:hover {
-    color: var(--primary-color);
-    border-bottom: 2px solid var(--primary-color);
-}
-
-
-/* HERO/JUMBOTRON */
-.hero {
-    background-color: var(--secondary-color); /* Warna yang lembut */
-    padding: 80px 0;
+.hobbies-section h2 {
     text-align: center;
-    min-height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
+    font-size: 2.5em;
+    margin-bottom: 40px;
 }
 
-.hero-content {
-    z-index: 10;
-    max-width: 800px;
-}
-
-.hero h2 {
-    font-size: 3em;
-    color: var(--white);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 15px;
-}
-
-.hero .greeting {
-    font-size: 1.2em;
-    color: var(--text-color);
-    font-weight: 600;
-}
-
-.hero .bio-short {
-    font-size: 1.1em;
-    color: var(--text-color);
-    margin-bottom: 30px;
-}
-
-.btn {
-    display: inline-block;
-    background-color: var(--primary-color);
-    color: var(--white);
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 25px;
-    font-weight: 700;
-    transition: background-color 0.3s, transform 0.2s;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.btn:hover {
-    background-color: #4A8C86; /* Warna lebih gelap saat hover */
-    transform: translateY(-2px);
-}
-
-/* BAGIAN TENTANG SAYA */
-#tentang {
-    background-color: var(--white);
-    text-align: center;
-}
-#tentang p {
-    max-width: 800px;
-    margin: 15px auto;
-}
-
-/* HOBI GRID */
-.hobi-grid {
+.hobbies-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
-    margin-top: 40px;
-    text-align: center;
 }
 
-.hobi-item {
-    background-color: var(--white);
+.hobby-item {
+    background-color: #ffffff;
     padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s, box-shadow 0.3s;
-    border-left: 5px solid var(--primary-color); /* Garis warna sebagai penanda */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.hobi-item:hover {
+.hobby-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    background-color: #fffaf0; /* Sedikit perubahan warna saat di-hover */
 }
 
-.hobi-item h4 {
-    color: var(--text-color);
-    margin-bottom: 10px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
+.hobby-item h3 {
+    margin-top: 0;
+    font-size: 1.4em;
 }
 
-/* HOBI Aksen Warna Berdasarkan Jenis */
-.coding { border-left-color: #007ACC; } /* Biru untuk coding */
-.cooking { border-left-color: #FF5733; } /* Merah/Oranye untuk masak */
-.traveling { border-left-color: #33A1FF; } /* Biru Langit untuk traveling */
-.knitting { border-left-color: #E6B0AA; } /* Merah Muda untuk merajut */
-
-
-/* KONTAK */
-#kontak {
-    background-color: var(--light-bg);
+/*
+ * Footer dan Kontak
+ */
+.main-footer {
+    background-color: #5d4a4a;
+    color: #fcefee;
+    padding: 40px 20px;
     text-align: center;
 }
 
-.social-links {
-    list-style: none;
-    padding: 20px 0;
+.main-footer h2 {
+    color: #fff;
+    margin-bottom: 20px;
 }
 
-.social-links li {
-    margin: 10px 0;
+.main-footer a {
+    color: #ffd700; /* Warna link kuning keemasan */
 }
 
-.social-links a {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s;
+.main-footer a:hover {
+    color: #ffffff;
 }
 
-.social-links a:hover {
-    color: var(--accent-color);
+.contact-info p {
+    margin: 5px 0;
 }
 
-.closing-note {
+.copyright {
     margin-top: 20px;
-    font-style: italic;
-    color: var(--text-color);
-}
-
-/* FOOTER */
-footer {
-    background-color: var(--primary-color);
-    color: var(--white);
-    text-align: center;
-    padding: 20px 0;
-}
-
-footer p {
-    margin: 0;
     font-size: 0.9em;
+    opacity: 0.8;
 }
 
-/* RESPONSIVENESS */
+/*
+ * Media Queries untuk Responsif (Penting untuk tampilan yang baik di ponsel)
+ */
 @media (max-width: 768px) {
-    header .container {
-        flex-direction: column;
+    .profile-hero {
+        flex-direction: column; /* Tata letak kolom di layar kecil */
+        text-align: center;
     }
-    nav ul {
-        margin-top: 15px;
-        justify-content: center;
+
+    .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 10px;
     }
-    .hero h2 {
-        font-size: 2.2em;
+
+    .main-nav li {
+        margin: 5px 0;
     }
 }
 
 @media (max-width: 480px) {
-    nav ul li a {
-        padding: 5px 10px;
-        font-size: 0.9em;
+    .profile-image-container {
+        width: 180px;
+        height: 180px;
     }
-    .hero {
-        padding: 60px 0;
+
+    .profile-info h1 {
+        font-size: 2.5em;
     }
-    .hero h2 {
-        font-size: 1.8em;
+
+    .hobbies-grid {
+        grid-template-columns: 1fr; /* Satu kolom di ponsel */
     }
 }
