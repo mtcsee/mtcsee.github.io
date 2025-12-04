@@ -1,95 +1,230 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio [Nama Kamu] | Eksperimental Mangunan</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-</head>
-<body>
 
-    <header>
-        <div class="container">
-            <h1>Sekar Prameswari</h1>
-            <nav>
-                <ul>
-                    <li><a href="#tentang">Tentang</a></li>
-                    <li><a href="#hobi">Hobi & Proyek</a></li>
-                    <li><a href="#kontak">Kontak</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+/*
+ * Gaya Umum dan Estetika
+ * Menggunakan font Playfair Display (serif, elegan) dan Roboto (sans-serif, modern)
+ */
+body {
+    /* Latar belakang estetis dengan gradasi warna lembut (seperti pink muda ke krem) */
+    background-image: linear-gradient(135deg, #fcefee 0%, #fef5e9 100%);
+    font-family: 'Roboto', sans-serif;
+    color: #333; /* Warna teks gelap yang lembut */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
 
-    <section id="hero" class="hero">
-        <div class="hero-content">
-            <p class="greeting">👋 Halo! Saya Sekar</p>
-            <h2>Siswa Kelas IX SMP Eksperimental Mangunan</h2>
-            <p class="bio-short">14 tahun | Siap Mengkode, Memasak, dan Berpetualang!</p>
-            <a href="#hobi" class="btn">Lihat Proyek Saya</a>
-        </div>
-        
-    </section>
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #5d4a4a; /* Warna judul yang lebih menonjol */
+}
 
-    <section id="tentang" class="section-padding">
-        <div class="container">
-            <h3>✨ Tentang Saya</h3>
-            <p>Saya <B>Sekar Prameswari<B>, siswa <B>Kelas IX</B> di <B>SMP Eksperimental Mangunan<B> Berusia <B>14 tahun<B>, saya percaya bahwa belajar adalah sebuah <B>petualangan<B>. Saya tidak hanya senang memecahkan masalah dengan kode, tetapi juga menciptakan keindahan melalui masakan, benang rajutan, dan pengalaman baru saat traveling.</p>
-            <p>Filosofi saya: <B>Inovasi dan Kreasi<B> harus berjalan beriringan.</p>
-        </div>
-    </section>
+a {
+    color: #a0522d; /* Warna link cokelat tanah */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
 
-    <hr>
+a:hover {
+    color: #8b4513; /* Warna link saat di-hover */
+}
 
-    <section id="hobi" class="section-padding">
-        <div class="container">
-            <h3>🎨 Hobi & Proyek Pilihan</h3>
+/*
+ * Header dan Navigasi
+ */
+.main-header {
+    background-color: rgba(255, 255, 255, 0.8); /* Latar belakang transparan */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-            <div class="hobi-grid">
-                <div class="hobi-item coding">
-                    <h4>🖥️ Coding & Web Development</h4>
-                    <p>Fokus pada <B>HTML, CSS, dan JavaScript<B>. Saya suka membuat website sederhana dan mengeksplorasi logika pemrograman. (Contoh Proyek: Kalkulator Sederhana, Desain Landing Page)</p>
-                </div>
+.main-nav ul {
+    list-style: none;
+    padding: 15px 20px;
+    margin: 0 auto;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
 
-                <div class="hobi-item cooking">
-                    <h4>🍳 Memasak & Baking</h4>
-                    <p>Saya suka bereksperimen di dapur, mencoba resep baru, dari kue-kue manis hingga masakan tradisional. Memasak adalah seni dan kimia yang menyenangkan! (Contoh Resep: Roti Sobek, Brownies Cokelat)</p>
-                </div>
+.main-nav a {
+    font-weight: 700;
+    padding: 5px 10px;
+    border-bottom: 2px solid transparent;
+}
 
-                <div class="hobi-item traveling">
-                    <h4>🗺️ Traveling & Eksplorasi</h4>
-                    <p>Saya percaya perjalanan membuka wawasan. Saya senang mengunjungi tempat-tempat baru dan mencatat pengalaman saya. (Contoh Perjalanan: Kunjungan ke Museum Sains, Mendaki Bukit Kecil)</p>
-                </div>
+.main-nav a:hover {
+    color: #5d4a4a;
+    border-bottom: 2px solid #5d4a4a;
+}
 
-                <div class="hobi-item knitting">
-                    <h4>🧶 Merajut & Kerajinan Tangan</h4>
-                    <p>Merajut adalah cara saya bersantai dan menciptakan sesuatu yang unik dengan tangan. Proyek favorit: dompet kecil dan <strong>scrunchies</strong>. (Contoh Karya: Syal Mini, Hiasan Gantung)</p>
-                </div>
-            </div>
-        </div>
-    </section>
+/*
+ * Konten Utama (Main)
+ */
+.content-wrapper {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
 
-    <hr>
+/*
+ * Bagian Profil Hero
+ */
+.profile-hero {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 0;
+    border-bottom: 1px solid #e0d9d3;
+}
 
-    <section id="kontak" class="section-padding">
-        <div class="container">
-            <h3>📬 Mari Berkenalan</h3>
-            <p>Tertarik untuk berdiskusi tentang kode, resep, atau ide kerajinan? Hubungi saya!</p>
-            <ul class="social-links">
-                <li>Email: <a href="mailto:emailanda@email.com">sekarpmw@gmail.com</a></li>
-                <li>Instagram: <a href="https://instagram.com/usernamekamu" target="_blank">ellefleurse</a></li>
-                <li>GitHub: <a href="https://github.com/usernamekamu" target="_blank">mtcsee</a></li>
-            </ul>
-            <p class="closing-note">Terima kasih sudah mampir! 😊</p>
-        </div>
-    </section>
+.profile-image-container {
+    flex-shrink: 0;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%; /* Membuat gambar menjadi lingkaran */
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Portofolio Sekar. Dibuat dengan ✨ dan ❤️.</p>
-        </div>
-    </footer>
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
 
-</body>
-</html>
+.profile-info h1 {
+    font-size: 3em;
+    margin-bottom: 5px;
+}
+
+.tagline {
+    font-style: italic;
+    color: #a0522d;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.details-box {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-left: 3px solid #a0522d;
+    border-radius: 5px;
+}
+
+.details-box h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+/*
+ * Bagian Hobi
+ */
+.hobbies-section {
+    padding: 60px 0;
+}
+
+.hobbies-section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.hobby-item {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hobby-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    background-color: #fffaf0; /* Sedikit perubahan warna saat di-hover */
+}
+
+.hobby-item h3 {
+    margin-top: 0;
+    font-size: 1.4em;
+}
+
+/*
+ * Footer dan Kontak
+ */
+.main-footer {
+    background-color: #5d4a4a;
+    color: #fcefee;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.main-footer h2 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.main-footer a {
+    color: #ffd700; /* Warna link kuning keemasan */
+}
+
+.main-footer a:hover {
+    color: #ffffff;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+/*
+ * Media Queries untuk Responsif (Penting untuk tampilan yang baik di ponsel)
+ */
+@media (max-width: 768px) {
+    .profile-hero {
+        flex-direction: column; /* Tata letak kolom di layar kecil */
+        text-align: center;
+    }
+
+    .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 10px;
+    }
+
+    .main-nav li {
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-image-container {
+        width: 180px;
+        height: 180px;
+    }
+
+    .profile-info h1 {
+        font-size: 2.5em;
+    }
+
+    .hobbies-grid {
+        grid-template-columns: 1fr; /* Satu kolom di ponsel */
+    }
+}
