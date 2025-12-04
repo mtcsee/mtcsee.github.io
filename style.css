@@ -1,13 +1,24 @@
+/*
+ * Variabel Warna
+ * Digunakan untuk konsistensi desain
+ */
+:root {
+    --color-background-soft: #fcf8f6; /* Krem lembut */
+    --color-background-light: #ffffff;
+    --color-primary-dark: #5d4a4a; /* Cokelat tua untuk judul/footer */
+    --color-secondary-accent: #a0522d; /* Cokelat tanah untuk link/aksen */
+    --color-text-dark: #333;
+    --color-text-tagline: #8d7373;
+}
 
 /*
  * Gaya Umum dan Estetika
- * Menggunakan font Playfair Display (serif, elegan) dan Roboto (sans-serif, modern)
  */
 body {
-    /* Latar belakang estetis dengan gradasi warna lembut (seperti pink muda ke krem) */
-    background-image: linear-gradient(135deg, #fcefee 0%, #fef5e9 100%);
+    /* Gradasi warna yang lebih lembut dan hangat */
+    background-image: linear-gradient(135deg, #fff7f2 0%, var(--color-background-soft) 100%);
     font-family: 'Roboto', sans-serif;
-    color: #333; /* Warna teks gelap yang lembut */
+    color: var(--color-text-dark);
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -16,25 +27,25 @@ body {
 
 h1, h2, h3 {
     font-family: 'Playfair Display', serif;
-    color: #5d4a4a; /* Warna judul yang lebih menonjol */
+    color: var(--color-primary-dark);
 }
 
 a {
-    color: #a0522d; /* Warna link cokelat tanah */
+    color: var(--color-secondary-accent);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #8b4513; /* Warna link saat di-hover */
+    color: var(--color-primary-dark);
 }
 
 /*
  * Header dan Navigasi
  */
 .main-header {
-    background-color: rgba(255, 255, 255, 0.8); /* Latar belakang transparan */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: var(--color-background-light); 
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -47,18 +58,20 @@ a:hover {
     max-width: 1000px;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
 }
 
 .main-nav a {
-    font-weight: 700;
-    padding: 5px 10px;
-    border-bottom: 2px solid transparent;
+    font-weight: 400; /* Dibuat lebih ringan */
+    padding: 5px 0;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .main-nav a:hover {
-    color: #5d4a4a;
-    border-bottom: 2px solid #5d4a4a;
+    color: var(--color-primary-dark);
+    border-bottom: 2px solid var(--color-secondary-accent); /* Aksen bawah saat hover */
 }
 
 /*
@@ -71,23 +84,24 @@ a:hover {
 }
 
 /*
- * Bagian Profil Hero
+ * Bagian Profil Hero (Header Besar)
  */
 .profile-hero {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 60px;
     padding: 60px 0;
-    border-bottom: 1px solid #e0d9d3;
 }
 
 .profile-image-container {
     flex-shrink: 0;
+    position: relative;
     width: 250px;
     height: 250px;
-    border-radius: 50%; /* Membuat gambar menjadi lingkaran */
+    /* Bingkai yang menyerupai bentuk pada desain */
+    border-radius: 50%; 
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.3); /* Bingkai luar putih transparan */
     overflow: hidden;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
 .profile-image {
@@ -97,29 +111,49 @@ a:hover {
     display: block;
 }
 
+/* Latar belakang bunga pada desain gambar */
+.flower-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Gunakan background-image bunga jika Anda ingin bingkai tetap lingkaran/oval */
+    /* Untuk menyesuaikan desain, saya biarkan kosong dan mengandalkan foto profil yang dikirim */
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.profile-info {
+    flex-grow: 1;
+}
+
 .profile-info h1 {
-    font-size: 3em;
+    font-size: 3.5em; /* Ukuran yang lebih besar */
     margin-bottom: 5px;
+    line-height: 1.1;
 }
 
 .tagline {
     font-style: italic;
-    color: #a0522d;
+    color: var(--color-text-tagline);
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    font-weight: 300;
 }
 
 .details-box {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: var(--color-background-light);
     padding: 20px;
-    border-left: 3px solid #a0522d;
+    border-left: 5px solid var(--color-secondary-accent);
     border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .details-box h2 {
     margin-top: 0;
-    font-size: 1.5em;
-    color: #333;
+    font-size: 1.4em;
+    color: var(--color-primary-dark);
 }
 
 /*
@@ -127,46 +161,74 @@ a:hover {
  */
 .hobbies-section {
     padding: 60px 0;
+    background-color: var(--color-background-soft); /* Warna latar yang membedakan */
+    margin: 40px -20px 0;
+    padding: 60px 20px;
 }
 
 .hobbies-section h2 {
     text-align: center;
-    font-size: 2.5em;
-    margin-bottom: 40px;
+    font-size: 2.8em;
+    margin-bottom: 50px;
 }
 
 .hobbies-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* Grid 3 kolom, minimal 250px per item */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
     gap: 30px;
 }
 
 .hobby-item {
-    background-color: #ffffff;
-    padding: 25px;
+    background-color: var(--color-background-light);
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .hobby-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    background-color: #fffaf0; /* Sedikit perubahan warna saat di-hover */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+.hobby-image-container {
+    width: 100%;
+    height: 200px; /* Tinggi gambar hobi yang seragam */
+    overflow: hidden;
+}
+
+.hobby-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Pastikan gambar mengisi container tanpa terdistorsi */
+    transition: transform 0.5s ease;
+}
+
+.hobby-item:hover .hobby-image-container img {
+    transform: scale(1.05);
 }
 
 .hobby-item h3 {
-    margin-top: 0;
-    font-size: 1.4em;
+    margin: 15px 0 5px;
+    font-size: 1.5em;
+    color: var(--color-primary-dark);
+}
+
+.hobby-item p {
+    padding: 0 15px 20px;
+    margin: 0;
+    font-size: 0.95em;
+    color: #666;
 }
 
 /*
  * Footer dan Kontak
  */
 .main-footer {
-    background-color: #5d4a4a;
-    color: #fcefee;
+    background-color: var(--color-primary-dark);
+    color: #fff;
     padding: 40px 20px;
     text-align: center;
 }
@@ -174,52 +236,68 @@ a:hover {
 .main-footer h2 {
     color: #fff;
     margin-bottom: 20px;
+    font-size: 2em;
 }
 
 .main-footer a {
-    color: #ffd700; /* Warna link kuning keemasan */
+    color: #ffe4b5; /* Warna link krem-peach */
+    font-weight: 500;
 }
 
 .main-footer a:hover {
-    color: #ffffff;
+    color: #fff;
 }
 
 .contact-info p {
-    margin: 5px 0;
+    margin: 8px 0;
+    font-weight: 300;
 }
 
 .copyright {
-    margin-top: 20px;
-    font-size: 0.9em;
-    opacity: 0.8;
+    margin-top: 30px;
+    font-size: 0.85em;
+    opacity: 0.9;
 }
 
 /*
- * Media Queries untuk Responsif (Penting untuk tampilan yang baik di ponsel)
+ * Media Queries untuk Responsif
  */
+@media (max-width: 900px) {
+    .hobbies-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
 @media (max-width: 768px) {
     .profile-hero {
-        flex-direction: column; /* Tata letak kolom di layar kecil */
+        flex-direction: column; 
         text-align: center;
+        gap: 30px;
+        padding: 40px 0;
+    }
+
+    .profile-image-container {
+        width: 200px;
+        height: 200px;
+    }
+
+    .profile-info h1 {
+        font-size: 3em;
     }
 
     .main-nav ul {
         flex-wrap: wrap;
         justify-content: space-around;
+        gap: 10px;
         padding: 10px;
     }
 
-    .main-nav li {
-        margin: 5px 0;
+    .details-box {
+        text-align: left;
     }
 }
 
 @media (max-width: 480px) {
-    .profile-image-container {
-        width: 180px;
-        height: 180px;
-    }
-
     .profile-info h1 {
         font-size: 2.5em;
     }
